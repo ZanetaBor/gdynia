@@ -1,0 +1,495 @@
+
+/* Common Styles */
+
+body {
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 1.2rem;
+   color: #292c33;
+}
+
+.pos-center{
+   margin: 0px auto;
+}
+
+.hidden {
+   display: none;
+}
+
+.clear{
+   clear: both;
+}
+
+
+/* Typography */
+
+h1 {
+   font-size: 3rem;
+   margin: 1rem;
+}
+
+h1, h2 {
+   font-family: 'Libre Baskerville', serif; 
+   text-transform: uppercase;
+   font-weight: bold;
+   text-align: center; 
+}
+
+h2 {
+   font-size: 2.5rem;
+   margin: 0;
+   padding: 2rem 2rem 1rem 2rem;
+   color: #d9e2e7;
+}
+
+h3 {
+   font-size: 2rem;
+}
+
+a {
+   cursor: pointer; 
+   text-decoration:none;
+   color:inherit;
+}
+
+ul {
+   list-style:none;
+}
+
+/* Header and Navigation */
+
+.main-header {
+   display: grid;
+   grid-template-columns: 1fr 3fr 1fr;
+   justify-content: center;
+   width: 100%;
+   background-color: #d9e2e7;
+}
+
+.all-pages {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-content: center;
+   width: 100%;
+   background-color: #51565a;
+}
+
+
+@media all and (max-width: 1000px) {
+   .main-header   {
+      display: grid;
+      grid-template-rows: auto auto auto;
+   }
+   .main-header  h1 {
+      font-size: 2rem;
+   }
+   .logo-link img {
+      height: 5rem;
+   }
+   
+} 
+
+.logo-link {
+   max-height: 3rem;
+}
+
+.logo-link-all-pages {
+   margin: 2rem;
+}
+
+.logo-link img {
+   height: 15rem;
+}
+
+.logo-link-all-pages img {
+   height: 5rem;
+}
+
+.hoverme {
+    display: grid; 
+    align-content: center;
+}
+
+a.menu-link, a.menu-link-all-pages{
+   background: url(../img/menu_toggle.svg) center no-repeat;
+   background-size: contain;
+   width: 5rem;
+   height: 5rem;
+   right: 0;
+   padding: .1rem;
+   position: fixed;
+   display: inline-block;
+   z-index: 9999;
+}
+
+a.menu-link-all-pages {
+   margin: 1rem;
+}
+
+.hoverme:hover div.dropdown-content {
+   display: block;
+}
+
+.dropdown-content {
+   display: none;
+}
+
+.menu {
+   padding: 1rem;
+   margin: 2rem;
+   position: fixed;
+   right: 0;
+   z-index: 9999;
+}
+
+nav li {
+   line-height: 2rem;
+   color:black;
+}
+
+
+/* parallax */
+
+.parallax {
+   height: 50rem;
+   margin: 0; 
+   width: 100%; 
+   background-attachment: fixed;
+   background-position: 50% 0;
+   background-size: cover;
+}
+
+.parallax-bg1 { background-image: url("http://localhost:8888/gdynia/trak/wp-content/uploads/2021/01/panorama-2559103_1920.jpg"); }
+.parallax-bg2 { background-image: url("http://localhost:8888/gdynia/trak/wp-content/uploads/2021/01/gdynia-429516_1920.jpg"); }
+.parallax-bg3 { background-image: url("http://localhost:8888/gdynia/trak/wp-content/uploads/2021/01/coast-5631033_1920.jpg"); }
+.parallax-bg4 { background-image: url("http://localhost:8888/gdynia/trak/wp-content/uploads/2021/01/IMG_0304-scaled.jpeg"); }
+.parallax-bg5 { background-image: url("http://localhost:8888/gdynia/trak/wp-content/uploads/2021/01/IMG_0310-scaled.jpeg"); }
+
+
+/* floating-box */
+
+.floating-text {
+   position: relative;
+   width: 100%;
+   height: 6rem;
+   margin: 0 auto;
+   background-color: #51565a;
+   overflow: hidden;
+}
+
+.floating-text p {
+   position:absolute;
+   color: azure;
+   font-size: 2rem;
+   margin: 0;
+   white-space: nowrap;
+   padding: 2rem;
+   animation: floating 40s linear infinite;
+}
+
+.floating-text > p:hover {
+   animation-play-state:paused;
+}
+
+@keyframes floating
+{
+  0% { transform:translateX(0); padding-left:110%; }
+  100% { transform:translateX(-100%); padding-left:110%; } 
+}
+
+
+
+/* search-blog */
+
+.search-category {
+   background-color: #d9e2e7;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   text-align: center;
+   padding: 2rem;
+}
+
+.search-category ul {
+   font-size: 2rem;
+   padding: 2rem;
+   background: url(../img/map-signs-solid.svg) left no-repeat;
+   background-size: contain;
+}
+
+@media all and (max-width: 775px) {
+   .search-category ul  {
+      background: url(../img/map-signs-solid-light.svg) left no-repeat;
+      background-size: contain;
+   }
+} 
+
+li.cat-item { 
+   padding: 1rem;
+}
+
+
+/* newest-post */
+
+.newest-post, .post-archive {
+   background-color: #51565a;
+   margin: 0;
+   padding-bottom: 1rem;
+}
+
+.tiles {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:space-between;
+   margin: 2rem 10rem 0rem 10rem;
+}
+
+@media all and (max-width: 1300px) {
+   .tiles {
+      justify-content:center;
+      margin: 1rem; 
+   }
+}
+
+.entry {
+   display: flex;
+   flex-direction: column; 
+}
+
+.tile-link {
+   display: flex;
+   flex-flow: column wrap;
+   align-items: center;
+   max-width: 25rem;
+   cursor: pointer; 
+   text-decoration: none;
+   background-color: #d9e2e7;
+}
+
+a.tile-link:hover {
+   transform: scale(1.1);
+   transition: .35s ease-in-out;
+}
+
+.tile-link h3 {
+   margin: 0;
+   padding: 2rem 2rem 0rem 2rem;
+}
+
+.tile-first { 
+   margin: 14rem 2rem 2rem 2rem;
+}
+
+.tile-second {
+   margin: 2rem 2rem 2rem 2rem;  
+}
+
+.tile-third {
+   margin: 15rem 2rem 2rem 2rem;  
+}
+
+.tile-fourth {
+   margin: 4rem 2rem 2rem 2rem;
+}
+
+@media all and (max-width: 1000px) {
+   .tile-first, .tile-second, .tile-third, .tile-fourth{
+      margin: 1rem; 
+   }
+}
+
+.tile-text {
+   display: flex;
+   flex-flow: row wrap;
+   margin: 1.5rem;
+   text-align: center;
+}
+
+.size-post-thumbnail {
+   display: flex;
+   height: auto;
+   max-width: 25rem;
+}
+
+a.all-posts-link{
+   display: block;
+   padding: 3rem;
+   font-size: 2rem;
+   color: #d9e2e7;
+   text-align: center;
+}
+
+
+/* Single post */
+
+.single-post {
+   display: flex;
+   flex-flow: column wrap;
+   align-content: center;
+   background-color: #51565a;
+   margin: 0;
+}
+
+.single-post h2 {
+   margin: 0;
+   padding-top: 0;
+   padding-bottom: 4rem;
+   color: #d9e2e7;
+}
+
+.single-post-content{
+   display: flex;
+   flex-flow: column wrap;
+   align-items: center;
+   max-width: 40rem;
+   margin: 0 2rem 0 2rem;
+   background-color: #d9e2e7;
+   border-radius: 15px
+}
+
+.single-post-content > img.size-post-thumbnail {
+   display: flex;
+   height: auto;
+   max-width: 40rem;
+}
+
+.single-post-content p {
+   margin: 2rem;
+}
+
+.single-post-archive {
+   margin: 2rem;
+   border-radius: 15px
+}
+
+
+/* Search */
+
+.searchform {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 1rem;
+}
+
+.screen-reader-text {
+   color: #d9e2e7;
+}
+
+input {
+   background-color: #d9e2e7;
+	border-radius: 15px;
+   padding: 1rem;
+   margin: 1rem;
+	outline: none;
+   font-size: 1.2rem
+}
+
+/* Navigation */
+
+.pagination {
+   text-align: center;
+}
+
+h2.screen-reader-text {
+   font-size: 1.2rem;
+   padding: 1.5rem 0 0 0;
+}
+
+.nav-links {
+   display: flex;
+   justify-content: center;
+}
+.nav-previous, .nav-next {
+   padding: 1rem;
+   color: #d9e2e7;
+}
+
+
+/* Error */
+
+.error {
+   background-color: #d9e2e7;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+   text-align: center;
+   padding: 2rem;
+   min-height: 40rem;
+}
+
+/* Footer */
+
+footer {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   padding-top: 2rem;
+   background-color: #1b0201;
+}
+
+@media all and (max-width: 1060px) {
+   footer {
+      justify-content:center;
+   }
+}
+
+.copyright {
+   display: flex;
+   align-items: flex-end;
+   color: #d9e2e7;
+   margin: 1rem;
+   font-size: 1rem;
+}
+
+.copyright img {
+   max-width: 100px;
+   vertical-align: middle;
+}
+
+.widget-container{
+   display: flex;
+   flex-flow: column wrap;
+   background: url(../img/letter.jpg) center no-repeat;
+   background-size: cover;
+   padding: 1rem;
+   margin: -15rem 2rem 1rem 2rem;
+   border-radius: 1rem;
+}
+
+@media all and (max-width: 1060px) {
+   .widget-container {
+      margin: 1rem;
+   }
+}
+
+.label-flex{
+   display: flex;
+   flex-flow: row wrap;
+}
+
+.contact-form-area, .contact-form-label, .wpcf7-submit{
+   background-color: transparent;
+	border-radius: 5px;
+   padding: .7rem;
+   margin: .4rem;
+	outline: none;
+   font-size: 1rem;
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+.contact-form-area  {
+   max-width: 30rem;
+}
+
+.contact-form-label {
+   max-width: 10rem;
+}
+
+.wpcf7-submit {
+   width: 5rem;
+   height: 2rem;
+}
+
+
